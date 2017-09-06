@@ -2,9 +2,17 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Counter from './components/Counter.js';
-import Result from './components/Counter.js';
+import Result from './components/Result.js';
 
 class App extends Component {
+  state = { counter: 0 };
+
+  incrementCounter = (incrementBy) => {
+    this.setState((prevState) => {
+      return { counter: prevState.counter + incrementBy }
+    });
+  };
+
   render() {
     return (
       <div className="App">
@@ -16,8 +24,8 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <div>
-          <Counter></Counter>
-          <Result></Result>
+          <Counter onClickFunction={this.incrementCounter} incrementBy={5}></Counter>
+          <Result counter={this.state.counter}></Result>
         </div>
       </div>
     );
