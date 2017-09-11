@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Counter from './components/Counter.js';
-import Result from './components/Result.js';
+import ReusableComponents from './components/ReusableComponents.js';
+import {
+  BrowserRouter as Router,
+  Route,
+  Redirect
+} from 'react-router-dom';
 
 class App extends Component {
   state = { counter: 0 };
@@ -24,8 +28,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <div>
-          <Counter onClickFunction={this.incrementCounter} incrementBy={5}></Counter>
-          <Result counter={this.state.counter}></Result>
+          <ReusableComponents> </ReusableComponents>
         </div>
       </div>
     );

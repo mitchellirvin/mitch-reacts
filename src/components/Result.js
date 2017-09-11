@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 // stateless component, can be const w/o extending component
 const Result = (props) => {
