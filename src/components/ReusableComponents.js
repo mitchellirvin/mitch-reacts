@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Counter from './Counter.js';
 import Result from './Result.js';
-import { Grid, Row, Col, Jumbotron } from 'react-bootstrap';
+import { Jumbotron } from 'react-bootstrap';
 
 class ReusableComponents extends Component {
   state = { counter: 0 };
@@ -23,9 +23,7 @@ class ReusableComponents extends Component {
           <Counter onClickFunction={this.incrementCounter} incrementBy={10}></Counter>
           <Counter onClickFunction={this.incrementCounter} incrementBy={100}></Counter>
         </p>
-        <p>
-          <Result counter={this.state.counter}></Result>
-        </p>
+        <Result counter={this.state.counter}></Result>
       </Jumbotron>
     );
   }

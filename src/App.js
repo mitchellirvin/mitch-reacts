@@ -2,16 +2,15 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 // styles
 import './App.css';
-import { Grid, Row, Col, Navbar, Nav, NavItem, Panel } from 'react-bootstrap';
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
 
 // components
 import ReusableComponents from './components/ReusableComponents.js';
-import GithubCards from './components/GithubCards.js';
+import CardList from './components/Card.js';
 import {
   BrowserRouter as Router,
   Link,
-  Route,
-  Redirect
+  Route
 } from 'react-router-dom';
 
 class App extends Component {
@@ -39,7 +38,6 @@ class App extends Component {
             <Navbar collapseOnSelect>
               <Navbar.Header>
                 <Navbar.Brand>
-                  <a></a>
                 </Navbar.Brand>
                 <Navbar.Toggle />
               </Navbar.Header>
@@ -55,16 +53,8 @@ class App extends Component {
               </Navbar.Collapse>
             </Navbar>
             {/* Routes */}
-            <Grid>
-              <Row>
-                <Col sm={12}>
-                  <Panel>
-                    <Route exact path='/' component={ReusableComponents} />
-                    <Route exact path='/route2' component={GithubCards} />
-                  </Panel>
-                </Col>
-              </Row>
-            </Grid>
+            <Route exact path='/' component={ReusableComponents} />
+            <Route exact path='/route2' component={CardList} />
           </div>
         </Router>
 
