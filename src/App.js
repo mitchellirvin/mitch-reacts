@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 // styles
 import './App.css';
-import { Nav, NavItem } from 'react-bootstrap';
+import { Grid, Row, Col, Navbar, Nav, NavItem, Panel } from 'react-bootstrap';
 
 // components
 import ReusableComponents from './components/ReusableComponents.js';
@@ -28,25 +28,43 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>Mitch Reacts</h2>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
 
         <Router>
           <div>
             <Nav bsStyle="tabs" activeKey="1">
-              <NavItem eventKey="1">
-                <Link to={'/'}>Route 1</Link>
-              </NavItem>
-              <NavItem eventKey="2">
-                <Link to={'/route2'}>Route 2</Link>
-              </NavItem>
+
             </Nav>
+            <Navbar collapseOnSelect>
+              <Navbar.Header>
+                <Navbar.Brand>
+                  <a></a>
+                </Navbar.Brand>
+                <Navbar.Toggle />
+              </Navbar.Header>
+              <Navbar.Collapse>
+                <Nav>
+                  <NavItem eventKey="1">
+                    <Link className="App-navitem" to={'/'}>Components</Link>
+                  </NavItem>
+                  <NavItem eventKey="2">
+                    <Link className="App-navitem" to={'/route2'}>Working w/ Data</Link>
+                  </NavItem>
+                </Nav>
+              </Navbar.Collapse>
+            </Navbar>
             {/* Routes */}
-            <Route exact path='/' component={ReusableComponents} />
-            <Route exact path='/route2' component={GithubCards} />
+            <Grid>
+              <Row>
+                <Col sm={12}>
+                  <Panel>
+                    <Route exact path='/' component={ReusableComponents} />
+                    <Route exact path='/route2' component={GithubCards} />
+                  </Panel>
+                </Col>
+              </Row>
+            </Grid>
           </div>
         </Router>
 
