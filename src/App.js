@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import ReusableComponents from './components/ReusableComponents.js';
+import GithubCards from './components/GithubCards.js';
 import {
   BrowserRouter as Router,
+  Link,
   Route,
   Redirect
 } from 'react-router-dom';
@@ -27,9 +29,18 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <div>
-          <ReusableComponents> </ReusableComponents>
-        </div>
+
+        <Router>
+          <div>
+          
+            <Link to={'/'}>Route 1</Link>
+            <Link to={'/route2'}>Route 2</Link>
+
+            <Route exact path='/' component={ReusableComponents} />
+            <Route exact path='/route2' component={GithubCards} />
+          </div>
+        </Router>
+
       </div>
     );
   }
