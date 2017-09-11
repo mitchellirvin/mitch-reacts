@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+// styles
 import './App.css';
+import { Nav, NavItem } from 'react-bootstrap';
+
+// components
 import ReusableComponents from './components/ReusableComponents.js';
 import GithubCards from './components/GithubCards.js';
 import {
@@ -32,10 +36,15 @@ class App extends Component {
 
         <Router>
           <div>
-          
-            <Link to={'/'}>Route 1</Link>
-            <Link to={'/route2'}>Route 2</Link>
-
+            <Nav bsStyle="tabs" activeKey="1">
+              <NavItem eventKey="1">
+                <Link to={'/'}>Route 1</Link>
+              </NavItem>
+              <NavItem eventKey="2">
+                <Link to={'/route2'}>Route 2</Link>
+              </NavItem>
+            </Nav>
+            {/* Routes */}
             <Route exact path='/' component={ReusableComponents} />
             <Route exact path='/route2' component={GithubCards} />
           </div>
