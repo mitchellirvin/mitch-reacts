@@ -6,7 +6,7 @@ import { Navbar, Nav, NavItem } from 'react-bootstrap';
 
 // components
 import ReusableComponents from './components/ReusableComponents.js';
-import CardList from './components/Card.js';
+import GitHubCards from './components/Card.js';
 import {
   BrowserRouter as Router,
   Link,
@@ -54,7 +54,7 @@ class App extends Component {
             </Navbar>
             {/* Routes */}
             <Route exact path='/' component={ReusableComponents} />
-            <Route exact path='/route2' component={CardList} />
+            <Route exact path='/route2' component={GitHubCards} />
           </div>
         </Router>
 
