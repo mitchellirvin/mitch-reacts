@@ -6,6 +6,7 @@ import {Jumbotron, Panel, Row, Col, Grid} from 'react-bootstrap';
 import Star from './Star.js';
 import Button from './Button.js';
 import Answer from './Answer.js';
+import Numbers from './Numbers.js';
 
 // import stylesheets
 import '../../resources/FontAwesome.4.7.0/css/font-awesome.css';
@@ -23,7 +24,7 @@ class PlayNine extends React.Component {
 
         <Grid>
           <Panel style={{marginLeft: '10%', marginRight: '10%'}}>
-            <Row>
+            <Row style={{marginTop: 20, marginBottom: 20}}>
               <Col md={5}>
                 <Star> </Star>
               </Col>
@@ -32,6 +33,11 @@ class PlayNine extends React.Component {
               </Col>
               <Col md={5}>
                 <Answer> </Answer>
+              </Col>
+            </Row>
+            <Row style={{marginTop: 20, marginBottom: 20}}>
+              <Col>
+                <Numbers> </Numbers>
               </Col>
             </Row>
           </Panel>
