@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 // styles
-import './App.css';
+import './resources/css/App.css';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 
 // components
 import ReusableComponents from './components/ReusableComponents.js';
 import GitHubCards from './components/Card.js';
+import PlayNine from './components/Game/PlayNine.js';
 import {
   BrowserRouter as Router,
   Link,
@@ -35,7 +36,7 @@ class App extends Component {
             <Nav bsStyle="tabs" activeKey="1">
 
             </Nav>
-            <Navbar collapseOnSelect>
+            <Navbar collapseOnSelect style={{marginBottom: 0}}>
               <Navbar.Header>
                 <Navbar.Brand>
                 </Navbar.Brand>
@@ -49,12 +50,16 @@ class App extends Component {
                   <NavItem eventKey="2">
                     <Link className="App-navitem" to={'/route2'}>Working w/ Data</Link>
                   </NavItem>
+                  <NavItem>
+                    <Link className="App-navitem" to={'/play-nine'}>Play Nine</Link>
+                  </NavItem>
                 </Nav>
               </Navbar.Collapse>
             </Navbar>
             {/* Routes */}
             <Route exact path='/' component={ReusableComponents} />
             <Route exact path='/route2' component={GitHubCards} />
+            <Route exact path='/play-nine' component={PlayNine} />
           </div>
         </Router>
 
