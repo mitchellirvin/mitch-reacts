@@ -5,8 +5,8 @@ In the future, it also will serve as the home to information about me, my work, 
 
 ## Getting Started
 Packages to install:
-react-bootstrap - `npm install --save react-bootstrap`. Be sure to import the any components you want to use with `import {<ComponentName>} from 'react-bootstrap';`.
-react-fontawesome - `npm install --save react-fontawesome`. Be sure to import the FontAwesome component with `import FontAwesome from 'react-fontawesome';`. Also be sure to download font-awesome [here](http://fontawesome.io/)
+* react-bootstrap - `npm install --save react-bootstrap`. Be sure to import the any components you want to use with `import {<ComponentName>} from 'react-bootstrap';`.
+* react-fontawesome - `npm install --save react-fontawesome`. Be sure to import the FontAwesome component with `import FontAwesome from 'react-fontawesome';`. Also be sure to download font-awesome [here](http://fontawesome.io/)
 
 ## React's Default README
 
