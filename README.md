@@ -1,4 +1,14 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+# Mitch Reacts
+
+This web-app is an adventure in learning React and some associated tools/packages.
+In the future, it also will serve as the home to information about me, my work, and other fun tidbits!
+
+## Getting Started
+Packages to install:
+react-bootstrap - `npm install --save react-bootstrap`. Be sure to import the any components you want to use with `import {<ComponentName>} from 'react-bootstrap';`.
+react-fontawesome - `npm install --save react-fontawesome`. Be sure to import the FontAwesome component with `import FontAwesome from 'react-fontawesome';`. Also be sure to download font-awesome [here](http://fontawesome.io/)
+
+## React's Default README
 
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
@@ -283,7 +293,7 @@ In the WebStorm menu `Run` select `Edit Configurations...`. Then click `+` and s
 
 Start your app by running `npm start`, then press `^D` on macOS or `F9` on Windows and Linux or click the green debug icon to start debugging in WebStorm.
 
-The same way you can debug your application in IntelliJ IDEA Ultimate, PhpStorm, PyCharm Pro, and RubyMine. 
+The same way you can debug your application in IntelliJ IDEA Ultimate, PhpStorm, PyCharm Pro, and RubyMine.
 
 ## Formatting Code Automatically
 
@@ -1769,7 +1779,7 @@ If you’re using [Apache HTTP Server](https://httpd.apache.org/), you need to c
     RewriteRule ^ index.html [QSA,L]
 ```
 
-It will get copied to the `build` folder when you run `npm run build`. 
+It will get copied to the `build` folder when you run `npm run build`.
 
 If you’re using [Apache Tomcat](http://tomcat.apache.org/), you need to follow [this Stack Overflow answer](https://stackoverflow.com/a/41249464/4878474).
 
