@@ -1,6 +1,5 @@
 // import components
 import React from 'react';
-import {Panel} from 'react-bootstrap';
 import '../../resources/css/Numbers.css';
 
 const Numbers = (props) => {
